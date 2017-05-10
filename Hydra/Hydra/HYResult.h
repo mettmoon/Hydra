@@ -14,22 +14,22 @@
 
 @interface HYResult : NSObject
 {
-	int32_t					_issuedId;
-	int32_t					_issuedIdOfQuery;
-	NSString				*_name;
-	NSMutableDictionary		*_paramDict;
-	BOOL					_automaticallyMadeByTimeout;
+    int32_t					_issuedId;
+    int32_t					_issuedIdOfQuery;
+    NSString				*_name;
+    NSMutableDictionary		*_paramDict;
+    BOOL					_automaticallyMadeByTimeout;
 }
 
 // public methods.
 
-+ (HYResult *) resultWithName: (NSString *)name;
-- (id) initWithName: (NSString *)name;
++ (HYResult *_Nullable) resultWithName: (NSString * _Nonnull)name;
+- (id _Nullable) initWithName: (NSString * _Nonnull)name;
 
-- (id) parameterForKey: (NSString *)key;
-- (void) setParameter: (id)anObject forKey: (NSString *)key;
-- (void) setParametersFromDictionary: (NSDictionary *)dict;
-- (void) removeParameterForKey: (NSString *)key;
+- (id _Nullable) parameterForKey: (NSString * _Nonnull)key;
+- (void) setParameter: (id _Nonnull)anObject forKey: (NSString * _Nonnull)key;
+- (void) setParametersFromDictionary: (NSDictionary * _Nonnull)dict;
+- (void) removeParameterForKey: (NSString * _Nonnull)key;
 
 @property (nonatomic, readonly) NSString *name;
 @property (nonatomic, readonly) int32_t issuedId;
